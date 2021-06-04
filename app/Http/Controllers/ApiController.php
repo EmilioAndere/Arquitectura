@@ -5,8 +5,30 @@ namespace App\Http\Controllers;
 use App\Models\Genre;
 use Illuminate\Http\Request;
 
+/** 
+*
+* @OA\Info(title="API Genres of Deezer", version="1.0")
+*
+*@OA\Server(url="http://localhost:8000")
+*/
+
 class ApiController extends Controller
 {
+    /**
+     * 
+     * @OA\Get(
+     *      path="/api/genre",
+     *      summary="Inserta todos los generos encontrados en la api de DEEZER",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Los Generos fueron Guardados en la BD."
+     *      ),
+     *      @OA\Response(
+     *          response="default",
+     *          description="Ha ocurrido un error"
+     *      )
+     * )
+     */
     public function getGenre(){
         $client = curl_init();
         curl_setopt($client, CURLOPT_URL, 'https://api.deezer.com/genre');

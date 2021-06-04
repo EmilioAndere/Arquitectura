@@ -1,0 +1,31 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Genres of Deezer",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000"
+        }
+    ],
+    "paths": {
+        "/api/genre": {
+            "get": {
+                "summary": "Inserta todos los generos encontrados en la api de DEEZER",
+                "operationId": "App\\Http\\Controllers\\ApiController::getGenre",
+                "responses": {
+                    "200": {
+                        "description": "Los Generos fueron Guardados en la BD."
+                    },
+                    "default": {
+                        "description": "Ha ocurrido un error"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
