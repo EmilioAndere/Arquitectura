@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 *
 * @OA\Info(title="API Genres of Deezer", version="1.0")
 *
-*@OA\Server(url="https://laravel-dep.herokuap.com")
+*@OA\Server(url="https://laravel-dep.herokuapp.com")
 */
 
 class ApiController extends Controller
