@@ -20,3 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/genre', [ApiController::class, 'getGenre']);
+
+Route::get('/get/genres', [ApiController::class, 'getAllGenres']);
+
+Route::get('/get/genre/{id}', [ApiController::class, 'getOneGenre']);
+
+Route::get('get/artist/{id}', [ApiController::class, 'getOneArtist']);
