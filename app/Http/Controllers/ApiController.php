@@ -59,39 +59,39 @@ class ApiController extends Controller
                     echo "<h6>el valor ya existe: ".$genre->picture."</h6>";
                 }
             }
-            if(!isset($genre->picture_small)){
+            if(isset($genre->picture_small)){
                 //echo "<img src='".$genre->picture_small."'><br>";
                 $genrePictureSmall = Genre::where('picture_small', $genre->picture_small)->first();
-                if(isset($genrePictureSmall)){
+                if(!isset($genrePictureSmall)){
                     $newGenre->picture_small = $genre->picture_small;    
                 }else{
                     echo "<h6>el valor ya existe: ".$genre->picture_small."</h6>";
                 }
             }
-            if(!isset($genre->picture_medium)){
+            if(isset($genre->picture_medium)){
                 //echo "<img src='".$genre->picture_medium."'><br>";
                 $genrePictureMedium = Genre::where('picture_medium', $genre->picture_medium)->first();
-                if(isset($genrePictureMedium)){
+                if(!isset($genrePictureMedium)){
                     
                     $newGenre->picture_medium = $genre->picture_medium;  
                 }else{
                     echo "<h6>el valor ya existe: ".$genre->picture_medium."</h6>";
                 }
             }
-            if(!isset($genre->picture_big)){
+            if(isset($genre->picture_big)){
                 //echo "<img src='".$genre->picture_big."'><br>";
                 $genrePictureBig = Genre::where('picture_big', $genre->picture_big)->first();
-                if(isset($genrePictureBig)){
+                if(!isset($genrePictureBig)){
                     
                     $newGenre->picture_big = $genre->picture_big;   
                 }else{
                     echo "<h6>el valor ya existe: ".$genre->picture_big."</h6>";
                 }
             }
-            if(!isset($genre->picture_xl)){
+            if(isset($genre->picture_xl)){
                 //echo "<img src='".$genre->picture_xl."'><br>";
                 $genrePictureXl = Genre::where('picture_xl', $genre->picture_xl)->first();
-                if(isset($genrePictureXl)){
+                if(!isset($genrePictureXl)){
                     
                     $newGenre->picture_xl = $genre->picture_xl;
                 }else{
