@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 *
 * @OA\Info(title="API Genres of Deezer", version="1.0")
 *
-*@OA\Server(url="http://localhost:8000")
+*@OA\Server(url="https://laravel-dep.herokuapp.com")
 */
 
 class ApiController extends Controller
