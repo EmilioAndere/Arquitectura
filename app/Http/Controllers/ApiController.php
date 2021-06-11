@@ -44,62 +44,65 @@ class ApiController extends Controller
             if(isset($genre->name) && isset($genre->id)){
                 //echo $genre->id." ".$genre->name."<br>";
                 $genreName = Genre::where('name', $genre->name)->first();
-                if(isset($genreName)){
-                    echo "<h6>el valor ya existe: ".$genre->name."</h6>";
-                }else{
+                if(!isset($genreName)){
                     $newGenre->name = $genre->name;
+                }else{
+                    echo "<h6>el valor ya existe: ".$genre->name."</h6>";
                 }
             }
             if(isset($genre->picture)){
                 //echo "<img src='".$genre->picture."'><br>";
                 $genrePicture = Genre::where('picture', $genre->picture)->first();
-                if(isset($genrePicture)){
-                    echo "<h6>el valor ya existe: ".$genre->picture."</h6>";
-                }else{
+                if(!isset($genrePicture)){
                     $newGenre->picture = $genre->picture;
+                }else{
+                    echo "<h6>el valor ya existe: ".$genre->picture."</h6>";
                 }
             }
-            if(isset($genre->picture_small)){
+            if(!isset($genre->picture_small)){
                 //echo "<img src='".$genre->picture_small."'><br>";
                 $genrePictureSmall = Genre::where('picture_small', $genre->picture_small)->first();
                 if(isset($genrePictureSmall)){
-                    echo "<h6>el valor ya existe: ".$genre->picture_small."</h6>";
-                }else{
                     $newGenre->picture_small = $genre->picture_small;    
+                }else{
+                    echo "<h6>el valor ya existe: ".$genre->picture_small."</h6>";
                 }
             }
-            if(isset($genre->picture_medium)){
+            if(!isset($genre->picture_medium)){
                 //echo "<img src='".$genre->picture_medium."'><br>";
                 $genrePictureMedium = Genre::where('picture_medium', $genre->picture_medium)->first();
                 if(isset($genrePictureMedium)){
-                    echo "<h6>el valor ya existe: ".$genre->picture_medium."</h6>";
-                }else{
+                    
                     $newGenre->picture_medium = $genre->picture_medium;  
+                }else{
+                    echo "<h6>el valor ya existe: ".$genre->picture_medium."</h6>";
                 }
             }
-            if(isset($genre->picture_big)){
+            if(!isset($genre->picture_big)){
                 //echo "<img src='".$genre->picture_big."'><br>";
                 $genrePictureBig = Genre::where('picture_big', $genre->picture_big)->first();
                 if(isset($genrePictureBig)){
-                    echo "<h6>el valor ya existe: ".$genre->picture_big."</h6>";
-                }else{
+                    
                     $newGenre->picture_big = $genre->picture_big;   
+                }else{
+                    echo "<h6>el valor ya existe: ".$genre->picture_big."</h6>";
                 }
             }
-            if(isset($genre->picture_xl)){
+            if(!isset($genre->picture_xl)){
                 //echo "<img src='".$genre->picture_xl."'><br>";
                 $genrePictureXl = Genre::where('picture_xl', $genre->picture_xl)->first();
                 if(isset($genrePictureXl)){
-                    echo "<h6>el valor ya existe: ".$genre->picture_xl."</h6>";
-                }else{
+                    
                     $newGenre->picture_xl = $genre->picture_xl;
+                }else{
+                    echo "<h6>el valor ya existe: ".$genre->picture_xl."</h6>";
                 }
             }
-            if(isset($genre->type)){
+            if(!isset($genre->type)){
                 //echo $genre->type."<br>";
-                echo "<h6>el valor ya existe: ".$genre->picture_xl."</h6>";
-            }else{
                 $newGenre->type = $genre->type;
+            }else{
+                
             }
             $newGenre->save();
         }
