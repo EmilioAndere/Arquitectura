@@ -98,12 +98,10 @@ class ApiController extends Controller
                     echo "<h6>el valor ya existe: ".$genre->picture_xl."</h6>";
                 }
             }
-            if(!isset($genre->type)){
+            
                 //echo $genre->type."<br>";
                 $newGenre->type = $genre->type;
-            }else{
-                
-            }
+            
             $newGenre->save();
         }
     }
