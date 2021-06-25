@@ -135,4 +135,8 @@ class ApiController extends Controller
             echo json_encode($genre);
         }
     }
+
+    public function help(){
+        return view('helping');
+    }
 }
